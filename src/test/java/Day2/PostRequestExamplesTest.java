@@ -17,7 +17,6 @@ import static org.hamcrest.Matchers.equalTo;
  * Request payload/Body ( JSON format)
  * Post URL
  * Response
- *
  * Different ways to create post request body/ request payload.
  * ---------------
  * 1) HashMap
@@ -31,8 +30,8 @@ public class PostRequestExamplesTest {
     String studentId;
 
 //1. Create post request body using HashMap
-    //@Test
-    void createStudentUsingHashMap(){
+    @Test
+    void createStudentUsingHashMapTest(){
 
         HashMap <String, Object> requestBody=new HashMap<>();
 
@@ -40,7 +39,7 @@ public class PostRequestExamplesTest {
         requestBody.put("location", "France");
         requestBody.put("phone", "0609 112 777");
 
-        String courses[]= {"C", "C++"};
+        String[] courses = {"C", "C++"};
         requestBody.put("courses",courses);
 
         studentId=given()
@@ -61,7 +60,7 @@ public class PostRequestExamplesTest {
     }
 
     //2. Create POST request body using json library
-    //@Test
+    @Test
     void createStudentUsingJsonLibrary(){
 
         JSONObject requestBody=new JSONObject();
@@ -69,7 +68,7 @@ public class PostRequestExamplesTest {
         requestBody.put("location", "France");
         requestBody.put("phone", "0609 112 777");
 
-        String courses[]= {"C", "C++"};
+        String[] courses = {"C", "C++"};
         requestBody.put("courses",courses);
 
         studentId=given()
@@ -90,7 +89,7 @@ public class PostRequestExamplesTest {
     }
 
     //3. Create POST request body using POJO class
-    //@Test
+    @Test
     void createStudentUsingPojoClass(){
 
         StudentPojo requestBody=new StudentPojo();
@@ -98,7 +97,7 @@ public class PostRequestExamplesTest {
         requestBody.setLocation("France");
         requestBody.setPhone("0609 112 777");
 
-        String courses[]= {"C", "C++"};
+        String[] courses = {"C", "C++"};
         requestBody.setCourses(courses);
 
         studentId=given()
