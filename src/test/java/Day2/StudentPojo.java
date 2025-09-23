@@ -37,7 +37,7 @@ public class StudentPojo {
     String name;
     String location;
     String phone;
-    String courses[];
+    String[] courses;
 
 
 }

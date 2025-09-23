@@ -49,8 +49,8 @@ public class HTTPMethodsDemoTest {
                 .time(lessThan(2000L))
                 .body("name",equalTo("pavan"))
                 .body("job",equalTo("trainer"))
-                .body("id", not(isEmptyOrNullString()))
-                .body("createdAt", not(isEmptyOrNullString()))
+                .body("id", not(emptyOrNullString()))
+                .body("createdAt", not(emptyOrNullString()))
                 .log().ifValidationFails()
                 .extract().path("id");
     }
@@ -77,7 +77,7 @@ public class HTTPMethodsDemoTest {
                 .time(lessThan(2000L))
                 .body("name",equalTo("pavan"))
                 .body("job",equalTo("trainer"))
-                .body("updatedAt", not(isEmptyOrNullString()))
+                .body("updatedAt", not(emptyOrNullString()))
                 .log().ifValidationFails();
     }
 
