@@ -49,7 +49,7 @@ public class AuthenticationTests {
     @Test
     void verifyTokenAuth(){
 
-        String bearerToken="ghp_XXXX";
+        String bearerToken = System.getenv("GITHUB_TOKEN");
 
         given()
                 .header("Authorization","Bearer "+bearerToken)
