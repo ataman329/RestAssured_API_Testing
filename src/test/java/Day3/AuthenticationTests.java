@@ -49,7 +49,7 @@ public class AuthenticationTests {
     @Test
     void verifyTokenAuth(){
 
-        String bearerToken="***REMOVED***";
+        String bearerToken="ghp_XXXX";
 
         given()
                 .header("Authorization","Bearer "+bearerToken)
