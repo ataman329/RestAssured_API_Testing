@@ -14,6 +14,8 @@ public class Student {
 
     //constructors
 
+    public Student() { } // ← dôležité pre deserializáciu
+
     public Student(String name, String location, String phone, String[] courses) {
         this.name = name;
         this.location = location;
