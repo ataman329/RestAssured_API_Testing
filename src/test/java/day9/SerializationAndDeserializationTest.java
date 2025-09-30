@@ -7,7 +7,7 @@ import org.testng.annotations.*;
 import io.restassured.response.*;
 
 
-public class SerializationAndDeserializationExample {
+public class SerializationAndDeserializationTest {
 
     String stuId; // premenovane na stu
 

@@ -14,9 +14,6 @@ public class Student {
 
     //constructors
 
-    public Student() {
-    } // default constructor
-
     public Student(String name, String location, String phone, String[] courses) {
         this.name = name;
         this.location = location;
